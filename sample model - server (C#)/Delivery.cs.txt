@@ -1,0 +1,36 @@
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
+
+namespace DeliveryService.Entity
+{
+    public class Delivery
+    {
+        public int DeliveryId { get; set; }
+
+        [JsonIgnore]
+        public string CarrierRun { get; set; }
+
+        public string Address { get; set; }
+
+        [JsonIgnore]
+        public string TimeDelivered { get; set; }
+
+        public bool IsDelivered { get; set; }
+
+        [JsonIgnore]
+        public string ImagePath { get; set; }
+
+        [JsonIgnore]
+        public string Latitude { get; set; }
+
+        [JsonIgnore]
+        public string Longitude { get; set; }
+
+        public List<DeliveryItem> DeliveryItems { get; set; }
+
+        public Delivery()
+        {
+            this.DeliveryItems = new List<DeliveryItem>();
+        }
+    }
+}

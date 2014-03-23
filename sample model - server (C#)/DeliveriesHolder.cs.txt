@@ -1,0 +1,15 @@
+﻿using System.Collections.Generic;
+
+namespace DeliveryService.Entity
+{
+    public class DeliveriesHolder
+    {
+        public string RunDate { get; set; }
+        public List<Delivery> Deliveries { get; set; }
+
+        public DeliveriesHolder()
+        {
+            this.Deliveries = new List<Delivery>();
+        }
+    }
+}
